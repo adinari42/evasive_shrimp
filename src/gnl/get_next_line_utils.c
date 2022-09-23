@@ -6,13 +6,13 @@
 /*   By: adinari <adinari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 00:08:55 by adinari           #+#    #+#             */
-/*   Updated: 2022/05/08 20:46:29 by adinari          ###   ########.fr       */
+/*   Updated: 2022/09/22 23:31:33 by adinari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int	ft_strlen(const char *s)
+int	ft_strlenn(const char *s)
 {
 	size_t	i;
 
@@ -28,7 +28,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 
 	i = 0;
-	len = ft_strlen(src);
+	len = ft_strlenn(src);
 	if (!dst || !src)
 		return (0);
 	if (dstsize > 0)
@@ -56,7 +56,7 @@ char	*ft_strjoin(char *str1, char *str2)
 	}
 	if (!str1 || !str2)
 		return (NULL);
-	result = malloc ((ft_strlen(str1) + ft_strlen(str2) + 1) * sizeof(char));
+	result = malloc ((ft_strlenn(str1) + ft_strlenn(str2) + 1) * sizeof(char));
 	if (result == NULL)
 		return (NULL);
 	index = -1;
@@ -66,7 +66,7 @@ char	*ft_strjoin(char *str1, char *str2)
 			result[index] = str1[index];
 	while (str2[count] != '\0')
 		result[index++] = str2[count++];
-	result[ft_strlen(str1) + ft_strlen(str2)] = '\0';
+	result[ft_strlenn(str1) + ft_strlenn(str2)] = '\0';
 	free(str1);
 	return (result);
 }
@@ -79,7 +79,7 @@ char	*ft_strchr(char *s, int n)
 	if (!s)
 		return (0);
 	if (n == '\0')
-		return ((char *)&s[ft_strlen(s)]);
+		return ((char *)&s[ft_strlenn(s)]);
 	while (s[index] != '\0')
 	{
 		if (s[index] == (char)n)

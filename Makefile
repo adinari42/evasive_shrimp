@@ -6,7 +6,7 @@
 #    By: adinari <adinari@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/30 01:20:12 by adinari           #+#    #+#              #
-#    Updated: 2022/09/07 22:28:39 by adinari          ###   ########.fr        #
+#    Updated: 2022/09/22 23:34:59 by adinari          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,9 +27,19 @@
 
 NAME = so_long
 
-FILES = main.c\
-		gnl/get_next_line.c\
-		gnl/get_next_line_utils.c
+FILES = src/main.c\
+		src/gnl/get_next_line.c\
+		src/gnl/get_next_line_utils.c\
+		src/dimensions.c\
+		src/map_stuff.c\
+		src/key_hook.c\
+		src/path_find.c\
+		src/utils.c\
+		src/printf/ft_printf.c\
+		src/printf/ft_puthex.c\
+		src/printf/ft_putnbr.c\
+		src/printf/ft_putptr.c\
+		src/printf/ft_putunsigned.c\
 
 OBJECTS = $(FILES:.c=.o)
 
@@ -47,7 +57,8 @@ $(NAME): $(OBJECTS)
 	$(CC) $(OBJECTS) $(LIBS) -o $(NAME)
 
 clean:
-	rm -rf *.o
+	rm -rf $(OBJECTS)
+	
 
 fclean: clean
 	rm -rf $(NAME) *.o

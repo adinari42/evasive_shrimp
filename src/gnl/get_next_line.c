@@ -6,7 +6,7 @@
 /*   By: adinari <adinari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 23:54:50 by adinari           #+#    #+#             */
-/*   Updated: 2022/08/29 13:57:02 by adinari          ###   ########.fr       */
+/*   Updated: 2022/09/22 23:31:58 by adinari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*new_bufferstart(char *buffer)
 		free(buffer);
 		return (NULL);
 	}
-	l = ft_strlen(buffer);
+	l = ft_strlenn(buffer);
 	new_buffer = malloc(l - i);
 	if (!new_buffer)
 		return (NULL);
