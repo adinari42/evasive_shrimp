@@ -6,7 +6,7 @@
 /*   By: adinari <adinari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 05:47:12 by adinari           #+#    #+#             */
-/*   Updated: 2022/09/22 22:21:32 by adinari          ###   ########.fr       */
+/*   Updated: 2022/09/24 21:43:00 by adinari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	choose_texture(mlx_t *mlx, int map_parse, int *x, int y)
 {
 	if (map_parse == '1')
 		render_texture(mlx, "pngs/wall.png", x, y);
-	else if (map_parse == '0')
+	else if (map_parse == '0' || map_parse == 'V')
 		render_texture(mlx, "pngs/floor.png", x, y);
 	else if (map_parse == 'P')
 	{

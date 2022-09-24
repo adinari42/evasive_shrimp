@@ -6,7 +6,7 @@
 /*   By: adinari <adinari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 04:21:52 by adinari           #+#    #+#             */
-/*   Updated: 2022/09/22 22:42:43 by adinari          ###   ########.fr       */
+/*   Updated: 2022/09/24 15:50:02 by adinari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,7 @@ void	get_dimensions(int dim[2], char *path)
 		dim[0] = parse_line(line.line, &dim[2]);
 		if (line.last_width != 0 && dim[0] != line.last_width)
 		{
-			perror("Error : Map not rectangular");
+			perror("Error :\nMap not rectangular");
 			exit(1);
 		}
 		if (line.line != NULL)

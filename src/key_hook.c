@@ -6,7 +6,7 @@
 /*   By: adinari <adinari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 18:11:43 by adinari           #+#    #+#             */
-/*   Updated: 2022/09/22 23:53:50 by adinari          ###   ########.fr       */
+/*   Updated: 2022/09/24 15:54:00 by adinari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	player_move_up(mlx_t *mlx)
 	int	f_x;
 	int	f_y;
 
-	next_pos_y = (g_data.p_img->instances[0].y - 5) / TXT_HEIGHT;
+	next_pos_y = (g_data.p_img->instances[0].y - 32) / TXT_HEIGHT;
 	next_pos_x = g_data.p_img->instances[0].x / TXT_WIDTH;
 	f_x = g_data.p_img->instances[0].x;
 	f_y = g_data.p_img->instances[0].y - 32;
