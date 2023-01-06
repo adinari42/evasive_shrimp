@@ -24,7 +24,7 @@ image manipulation and event management using X-Window and Cocoa functionalities
 <li> 
 <h7>run the executable with the path of a map as a parameter</h7>
 
-```./so_long maps\map1.ber```
+```./so_long maps/map1.ber```
 </li>
 <li> 
 <h7>enjoy collecting crypto as a shrimp</h7>
